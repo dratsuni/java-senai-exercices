@@ -4,5 +4,5 @@
 /**
  * 
  */
-module exercicios_java_SENAI {
+module sistema_cadastro_produto {
 }
