@@ -16,13 +16,19 @@ public class Conta {
 		return titular;
 	}
 	
-	public void setTitular(String titular) {
-		this.titular = titular;
+	public double getSaldo() {
+		return saldo;
 	}
 	
 	public int getNumConta() {
 		return numConta;
 	}
+	
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	
+
 	
 	public void depositar(double valor) {
 			saldo = (valor >= 0) ? saldo + valor : saldo;
@@ -39,6 +45,6 @@ public class Conta {
 	
 	@Override
 	public String toString() {
-		return String.format("Titular: %s\nNúmero da conta: %d\nSaldo: %.2f", titular, numConta, saldo);
+		return String.format("Olá, %s.\nNúmero da conta: %d\nSaldo disponível: R$%.2f%n", titular, numConta, saldo);
 	}
 }
