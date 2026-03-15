@@ -7,16 +7,8 @@ import exerciciofuncionario.view.MenuView;
 public class Program {
 	
 	public static void main(String[] args) {
-
-		int op = 0;
 		Scanner sc = new Scanner(System.in);
-		
-		while(op != 4) {
-			System.out.println("[Gerenciador de funcionarios]");
-			op = MenuView.opcoesMenu(sc);
-			MenuManager.menu(sc, op);
-		}
-		
+		while(MenuManager.menu(sc, MenuView.opcoesMenu(sc)));
 		sc.close();
 	}
 }

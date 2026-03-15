@@ -7,23 +7,23 @@ import exerciciofuncionario.view.MenuView;
 
 public class MenuManager {
 	
-	public static void menu(Scanner sc, int op) {
+	public static boolean menu(Scanner sc, int op) {
 		switch(op) {
 			case 1:
 				GerenciadorDeFuncionarios.addFuncionario(MenuView.cadastrarFuncionario(sc));
-				break;
+				return true;
 			case 2:
 				funcionarioMenu(MenuView.pesquisarFuncionario(sc), sc);
-				break;
+				return true;
 			case 3:
 				GerenciadorDeFuncionarios.mostrarFuncionarios();
-				break;
+				return true;
 			case 4:
 				System.out.println("Saindo...");
-				break;
+				return false;
 			default:
 				System.out.println("Essa opcao nao existe. Tente novamente.");
-				break;
+				return true;
 		}
 	}
 	

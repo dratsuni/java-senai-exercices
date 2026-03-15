@@ -8,10 +8,7 @@ import gerenciadordeproduto.view.MenuView;
 public class Program {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int op;
-		
-		while (Menu.menu(sc,(op = MenuView.menuView(sc))));
-	
+		while (Menu.menu(sc,MenuView.menuView(sc)));
 		sc.close();
 	}
 }

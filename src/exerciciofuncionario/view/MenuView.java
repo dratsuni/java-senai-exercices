@@ -8,6 +8,7 @@ import exerciciofuncionario.utils.ValidarIntervalo;
 public class MenuView {
     public static int opcoesMenu(Scanner sc) {
     	int op;
+		System.out.println("[Gerenciador de funcionarios]");
     	System.out.println("[1]Cadastrar funcionario\n[2]Selecionar funcionario\n[3]Mostrar todos os funcionarios\n[4]Sair\n");
     	System.out.print("selecione > ");
     	op = sc.nextInt();
