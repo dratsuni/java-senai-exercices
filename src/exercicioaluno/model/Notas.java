@@ -1,7 +1,7 @@
-package exercicioaluno.entities;
+package exercicioaluno.model;
 import java.util.ArrayList;
 import java.util.List;
-import exercicioaluno.utils.Utils;
+import java.util.stream.Collectors;
 
 public class Notas {
 	private List<Double> notas;
@@ -23,14 +23,11 @@ public class Notas {
 	}
 	
 	public double media() {
-	    return Utils.sumDoubleList(notas) / divisor;
+	    return notas.stream().collect(Collectors.summingDouble(m -> m)) / divisor;
 	}
 	
 	public boolean situacaoAprovacao() {
-		if (media() > criterioAprovacao) {
-			return true;
-		}
-		return false;
+		return media() > criterioAprovacao;
 	}
 	
 

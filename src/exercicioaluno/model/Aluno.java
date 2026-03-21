@@ -1,5 +1,4 @@
-package exercicioaluno.entities;
-import exerciciofuncionario.entities.Matricula;
+package exercicioaluno.model;
 
 public class Aluno {
 	private String nome;
@@ -16,8 +15,8 @@ public class Aluno {
 		return nome;
 	}
 	
-	public Matricula getMatricula(){
-		return matricula;
+	public int getMatricula(){
+		return matricula.getMatricula();
 	}
 	
 	public Notas getNotas() {

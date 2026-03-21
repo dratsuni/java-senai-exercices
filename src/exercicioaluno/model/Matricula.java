@@ -1,4 +1,4 @@
-package exerciciofuncionario.entities;
+package exercicioaluno.model;
 
 public class Matricula {
 	private static int ultimaMatricula = 20261000;
@@ -10,6 +10,10 @@ public class Matricula {
 	
 	public int getMatricula() {
 		return matricula;
+	}
+	
+	public static int getUltimaMatricula() {
+		return ultimaMatricula;
 	}
 	
 	private static int gerarMatricula() {
