@@ -31,8 +31,6 @@ public class ListaAluno {
 	public double mediaGeral() {
 		return alunos.stream().mapToDouble(p -> p.getNotas().media()).average().getAsDouble();
 	}
+
 	
-	public List<String> alunosAprovados(){
-		return alunos.stream().filter(a -> a.getNotas().situacaoAprovacao()).map(Aluno::getNome).toList();
-	}
 }
