@@ -90,7 +90,6 @@ public class MenuController {
 			Utils.mostrarItensLista(lista);
 		} else {
 			MenuView.menuMsg(String.format("Não há alunos %ss\n", situacao));
-
 		}
 		MenuView.menuMsg("==========================================\n");
 	}
