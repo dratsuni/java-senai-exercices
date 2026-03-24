@@ -13,7 +13,9 @@ public class ListaAluno {
 	public List<Aluno> getListaAluno(){
 		return List.copyOf(alunos);
 	}
-	
+	public int getQuantidadeAluno() {
+		return alunos.size();
+	}
 	public void addAluno(Aluno aluno) {
 		if (aluno != null) {
 			alunos.add(aluno);
@@ -31,6 +33,9 @@ public class ListaAluno {
 	public double mediaGeral() {
 		return alunos.stream().mapToDouble(p -> p.getNotas().media()).average().getAsDouble();
 	}
-
+	
+	public List<String> listarAlunos(SituacaoAluno situacao){
+		return alunos.stream().filter(a -> a.getNotas().getSituacao() == situacao).map(a -> a.getNome()).toList();
+	}
 	
 }

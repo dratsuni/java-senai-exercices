@@ -4,6 +4,7 @@ public class Aluno {
 	private String nome;
 	private Matricula matricula;
 	private Notas notas;
+
 	
 	public Aluno(String nome) {
 		this.nome = nome;
@@ -21,5 +22,10 @@ public class Aluno {
 	
 	public Notas getNotas() {
 		return notas;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("Matricula: %d\nNome: %s\n%s\n", getMatricula(), nome, notas);
 	}
 }
